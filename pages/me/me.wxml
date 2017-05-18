@@ -1,0 +1,26 @@
+<!--pages/me/me.wxml-->
+
+<view class="userinfo">
+    <image class="avatar" src="{{avatarUrl}}" background-size="cover"></image>
+</view>
+<view class="userinfo-name">{{nickName}}</view>
+
+<view class="chart-contain">
+    <view style="text-align:center;color: #aaa;"> 近期脉搏采集记录 </view>
+
+    <block wx:if="{{chart_block}}">
+        <canvas style="width: 375px; height: 200px;" canvas-id="areaCanvas" class="canvas" bindtouchstart="touchHandler"></canvas>
+    </block>
+    <block wx:if="{{!chart_block}}">
+            <view class="no-chart" style="text-align:center;color: #aaa;"> 暂无数据 </view>
+    </block>
+</view>
+
+<view style="width:{{phoneWidth}}px" class="tips-contain">
+    <icon type="success_no_circle" size="16" color="green"/>
+    <text> little tips </text>
+</view>
+
+<view class="tips" style="width:{{phoneWidth}}px">
+    <text> 1.脉搏数据正常\n2.身体正常\n3.继续保持</text>
+</view>

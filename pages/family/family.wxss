@@ -1,0 +1,36 @@
+/* pages/family/family.wxss */
+
+page {
+        display: block;
+        min-height: 100%;
+        background-color: #f2f2f2
+}
+.family-1{
+        background-color: #ffffff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+}
+
+.family-avatar {
+        width: 128rpx;
+        height: 128rpx;
+        margin: 20rpx;
+        border-radius: 50%;
+}
+.family-name {
+        position:absolute;
+        top:45px;
+        left:25%;
+}
+.family-phone {
+        position: absolute;
+        top: 6%;
+        right: 10px;
+        height: 42px;
+        width: 42px;
+}
+.family-status {
+        position: absolute;
+        top: 45px;
+        left: 45%;
+}

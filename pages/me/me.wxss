@@ -1,0 +1,39 @@
+/* pages/me/me.wxss */
+.avatar {
+    border-radius: 50%;
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;    
+}
+.userinfo-name {
+    color: #aaa;
+    position: absolute;
+    top:30px;
+    left:80px;
+}
+
+
+.canvas {
+  position: fixed;
+  top: 135px;
+/*  padding-top: 200px;*/
+}
+
+.tips-contain {
+    top: 335px;
+    position: absolute;
+    text-align: center;
+    color: #aaa;
+}
+
+.no-chart {
+    margin-top: 30px;
+}
+
+.tips {
+    position: absolute;
+    top: 385px;
+    text-align: center;
+    color: yellowgreen;
+
+}

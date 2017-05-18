@@ -1,0 +1,60 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  align-items: center;
+/*  padding-right: 280px;*/
+  position: absolute;
+  top:10px;
+  left:0px;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.heartloop {
+  width:300px;
+  height:250px;
+
+
+}
+.choosePulseInfo {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #aaa;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.heartbeats-contain {
+  margin : 25px; /*元素外边框*/
+  width:300px;
+  height:250px;
+}
+
+.beatvalue {
+  color: #aaa;
+  position: relative;/*相对于一个元素的正常位置来对其定位*/
+  bottom: 185px;
+  left: 75px;
+  font-size: 70px;
+  text-align:center;
+
+}
+.heart {
+  width:38px;
+  height:38px;
+  position:absolute;
+  top:215px;
+  left:59%;
+}
+
+.bleconn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+

@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/family/family",
+    "pages/me/me",
+    "pages/logs/logs",
+    "pages/pulse/pulse",
+    "pages/familyDetail/familyDetail",
+    "pages/familyshare/familyshare"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "体征监测助手",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "脉搏",
+      "iconPath": "pages/img/me.png",
+      "selectedIconPath": "pages/img/me.png"
+    },
+      {
+        "pagePath": "pages/family/family",
+        "text": "家人健康",
+        "iconPath": "pages/img/family.png",
+        "selectedIconPath": "pages/img/family.png"
+      }
+    ],
+    "color": "#fffff",
+    "selectedColor": "#000000",
+    "borderStyle": "white",
+    "position": "bottom"
+  }
+}

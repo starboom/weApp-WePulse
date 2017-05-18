@@ -1,0 +1,21 @@
+
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #f2f2f2;
+}
+
+.pulseinfo-contain {
+  /*background-color: #ffffff;
+*/
+}
+.pulseinfo {
+  /*font-size: 100px;*/
+}
+
+.pulseinfo-detail {
+  background-color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /*font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+*/}

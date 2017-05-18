@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="heartbeats-contain">
+    <image src="../img/loop.png" class="heartloop" background-size="cover"></image>
+    <text class="beatvalue">{{beatvalue}}</text>
+    <block wx:if="{{start_flag}}">
+    <image src="../img/heart_gray.png" class="heart"></image>
+    </block>
+    <block wx:if="{{!start_flag}}">
+      <image class="heart" src="../img/stop.png" src="../img/heart_red.png"></image> 
+    </block> 
+  </view>
+  <block wx:if="{{start_flag}}">
+    <image style="width:48px;height:48px" class="heartstart" src="../img/start.png" bindtap="heartStart" ></image> 
+  </block>
+  <block wx:if="{{!start_flag}}">
+    <image style="width:48px;height:48px" class="heartstop" src="../img/stop.png" bindtap="heartStop" background-size="cover"></image> 
+  </block>
+  <block wx:if="{{choosePulseInfoFlag}}">
+  <picker bindchange="choosePulseInfo" value="{{index}}" range="{{pulseInfoArray}}">
+        <view class="choosePulseInfo">
+            您是什么时候采集的脉搏:{{pulseInfoArray[index]}}
+        </view>
+  </picker>
+  </block>
+</view>
+

@@ -1,0 +1,11 @@
+<!--pages/family/family.wxml-->
+<view class="top-contain">
+        <view class="family-1">
+                <image src="{{familyAvatar}}" class="family-avatar" bindtap="familyDeatil" ></image>
+                <view class="family-name">{{familyName}}</view>
+                <view class="family-status">脉搏: {{familyPulse}}</view>
+                <image src="../img/phone.png" class="family-phone" bindtap="makePhoneCall"></image>
+
+        </view>
+
+</view>

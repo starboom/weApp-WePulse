@@ -1,0 +1,26 @@
+/* pages/familyshare/familyshare.wxss */
+page {
+        display: block;
+        min-height: 100%;
+        background-color: #f2f2f2
+}
+
+.section {
+/*    background-color: #ffffff;*/
+    /*margin: 10px*/
+}
+
+.section__relation {
+    background-color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.section__phone {
+
+    background-color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.btn-area {
+    
+}

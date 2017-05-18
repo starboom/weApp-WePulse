@@ -1,0 +1,10 @@
+<!--logs.wxml-->
+
+<view class="pulseinfo-contain">
+  <view class="pulseinfo-detail">
+    <view class="pulseinfo">pulseinfo</view>
+    <view class="pulseinfo-date">时间: {{date}}</view>
+    <view class="pulseinfo-info">类型: {{pulseInfo}}</view>
+    <view class="pulseinfo-num">脉搏数据: {{pulseNum}}</view>
+  </view>
+</view>

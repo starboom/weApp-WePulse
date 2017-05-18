@@ -1,0 +1,17 @@
+/* pages/ble/ble.wxss */
+.ss {
+    background-color: lightblue;
+    height: 10px;
+    width:100%;
+}
+.title {
+    margin: auto;
+}
+
+
+.item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+     height: 130rpx;
+     width: 100%;
+}

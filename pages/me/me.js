@@ -30,7 +30,7 @@ Page({
     areaChart.showToolTip(e);
 
   },
-  onLoad:function(options){
+  OnChart:function(){
     var that = this
     that.setData({
       nickName: app.globalData.userInfo.nickName,
@@ -105,7 +105,7 @@ Page({
         categories: this.data.pulseDataCate,
         animation: true,
         series: [{
-            name: '实时脉搏',
+            name: 'xxx',
             data: this.data.pulseNumArray,
             format: function (val) {
                 return val;
@@ -133,6 +133,8 @@ Page({
         height: 200
     })
 /**************************/
+
+
   },
   recentpulse: function() {
     //近期脉搏记录，从icsuft上获取
@@ -147,6 +149,8 @@ Page({
   },
   onShow:function(){
     // 页面显示
+    console.log("on show");
+    this.OnChart();
   },
   onHide:function(){
     // 页面隐藏

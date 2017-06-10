@@ -1,11 +1,16 @@
 <!--pages/family/family.wxml-->
 <view class="top-contain">
+<view wx:for="{{familyArray}}">
         <view class="family-1">
-                <image src="{{familyAvatar}}" class="family-avatar" bindtap="familyDeatil" ></image>
-                <view class="family-name">{{familyName}}</view>
-                <view class="family-status">脉搏: {{familyPulse}}</view>
-                <image src="../img/phone.png" class="family-phone" bindtap="makePhoneCall"></image>
-
+          <image src="{{item.avatarUrl}}" class="family-avatar" data-name="{{item.nickName}}" bindtap="familyDeatil" ></image>
+          <view class="family-name" style="top:{{item.namecss}}px">{{item.nickName}}</view>
+          <view class="family-status" style="top:{{item.statuscss}}px">脉搏: {{item.pulserecent}}</view>
+          <image src="../img/phone.png" class="family-phone" data-phonenum="{{item.phonenum}}" style = "top:{{item.phonecss}}px" bindtap="makePhoneCall"></image>
         </view>
+
+<!--        {{index}}:{{item.avatarUrl}}
+        {{index}}:{{item.nickName}}
+        {{index}}:{{item.pulserecent}}-->
+</view>
 
 </view>

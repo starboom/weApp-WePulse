@@ -1,5 +1,6 @@
 // pages/familyDetail/familyDetail.js
 //familyDeatil根据传过来的 经纬度显示当前该人在什么地方
+var app = getApp()
 Page({
   data: {
     markers: [],
@@ -18,21 +19,38 @@ Page({
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
     var that = this
-    wx.getLocation({
-      type: "gcj02",
+    console.log(options)
+
+    wx.request({
+      url: 'https://icsuft.com/test/pulseLocation.php',
+      data:{
+        "getLocation":true,
+        "nickName" : options.username
+      },
       success: function(res) {
-        that.setData({
-          latitude: res.latitude,
-          longitude: res.longitude,
-          markers: that.createMarkers(0, "28.165898", "112.942655")
+        console.log(res);
+        var latitude = prase(res.data.latitude);
+        var longitude = prase(res.data.longitude);
+        var avatarUrl = prase(res.data.avatarUrl);
+        console.log(avatarUrl);
+        wx.getLocation({
+          type: "gcj02",
+          success: function (res) {
+            that.setData({
+              latitude: res.latitude,
+              longitude: res.longitude,
+              markers: that.createMarkers(0, latitude, longitude, avatarUrl)
+            })
+            console.log(that.data.markers)
+          }
         })
       }
     })
 
   },
-  createMarkers: function(_id, _latitude, _longitude) {
+  createMarkers: function(_id, _latitude, _longitude, _iconpath) {
      var _markers = [{
-       iconPath: "../img/avatar.png",
+       iconPath: _iconpath,
        id: _id,
        latitude: _latitude,
        longitude: _longitude,
@@ -55,3 +73,15 @@ Page({
     // 页面关闭
   }
 })
+function prase(str) {
+  var strs = str.split(":")
+  var content = ""
+  for (var i = 1; i < strs.length; ++i) {
+    if (i != strs.length - 1) {
+      content = content + strs[i] + ":";
+    } else {
+      content = content + strs[i] + "";
+    }
+  }
+  return content;
+}

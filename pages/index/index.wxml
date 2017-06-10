@@ -1,21 +1,29 @@
 <!--index.wxml-->
 <view class="container">
-
+    <image class="temperature" style="width:48px;height:48px" bindtap="bindTemperature" src="../img/tmp-select-128.png" background-size="cover"></image>
   <view  bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
   <view class="heartbeats-contain">
     <image src="../img/loop.png" class="heartloop" background-size="cover"></image>
-    <text class="beatvalue">{{beatvalue}}</text>
     <block wx:if="{{start_flag}}">
-    <image src="../img/heart_gray.png" class="heart"></image>
+    <text class="beatvalue-0">{{beatvalue}}</text>
+    <image src="../img/heart-128.png" class="heart"></image>
     </block>
     <block wx:if="{{!start_flag}}">
-      <image class="heart" src="../img/stop.png" src="../img/heart_red.png"></image> 
+        <block wx:if="{{!waitFlag}}">
+            <text class="beatvalue">{{beatvalue}}</text>
+            <text class="finalpulse" style="position:absolute;color:#38af08;padding-left:30px;"> 请暂停结束 </text>
+        </block>
+        <block wx:if="{{waitFlag}}">
+            <image class="heart" src="../img/wait.gif"></image> 
+        </block>
+      <image class="heart" src="../img/heart_select-128.png"></image> 
     </block> 
   </view>
   <block wx:if="{{start_flag}}">
+
     <image style="width:48px;height:48px" class="heartstart" src="../img/start.png" bindtap="heartStart" ></image> 
   </block>
   <block wx:if="{{!start_flag}}">
@@ -24,7 +32,7 @@
   <block wx:if="{{choosePulseInfoFlag}}">
   <picker bindchange="choosePulseInfo" value="{{index}}" range="{{pulseInfoArray}}">
         <view class="choosePulseInfo">
-            您是什么时候采集的脉搏:{{pulseInfoArray[index]}}
+            请选择采取脉搏场景
         </view>
   </picker>
   </block>

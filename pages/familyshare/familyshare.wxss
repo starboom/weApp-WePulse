@@ -16,11 +16,19 @@ page {
 }
 
 .section__phone {
-
-    background-color: #ffffff;
-    margin-bottom: 15px;
+    background-color:#ffffff;
+    margin-bottom:15px;
+    margin-top:15px;
+    padding-top:5px;
+    padding-bottom:5px;
 }
 
 .btn-area {
-    
+
+}
+.title {
+    text-align:center;
+    margin-bottom:15px;
+    margin-top: 15px;
+    text-shadow: 5px 5px 5px #c9daf8;
 }

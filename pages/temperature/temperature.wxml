@@ -1,0 +1,3 @@
+<view class="classname">
+当前体温为: {{temperature}}
+</view>

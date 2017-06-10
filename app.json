@@ -4,9 +4,9 @@
     "pages/family/family",
     "pages/me/me",
     "pages/logs/logs",
-    "pages/pulse/pulse",
     "pages/familyDetail/familyDetail",
-    "pages/familyshare/familyshare"
+    "pages/familyshare/familyshare",
+    "pages/temperature/temperature"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -17,15 +17,14 @@
   "tabBar": {
     "list": [{
       "pagePath": "pages/index/index",
-      "text": "脉搏",
+      "text": "体征健康",
       "iconPath": "pages/img/me.png",
-      "selectedIconPath": "pages/img/me.png"
-    },
-      {
-        "pagePath": "pages/family/family",
-        "text": "家人健康",
-        "iconPath": "pages/img/family.png",
-        "selectedIconPath": "pages/img/family.png"
+      "selectedIconPath": "pages/img/me_select.png"
+    },{
+        "pagePath": "pages/me/me",
+        "text": "我",
+        "iconPath": "pages/img/self.png",
+        "selectedIconPath": "pages/img/self_select.png"
       }
     ],
     "color": "#fffff",

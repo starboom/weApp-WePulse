@@ -20,6 +20,7 @@
 
 
 }
+
 .choosePulseInfo {
   margin-top: 30px;
   margin-bottom: 10px;
@@ -36,6 +37,15 @@
 }
 
 .beatvalue {
+  color: #38af08;
+  position: relative;/*相对于一个元素的正常位置来对其定位*/
+  bottom: 185px;
+  left: 75px;
+  font-size: 70px;
+  text-align:center;
+
+}
+.beatvalue-0 {
   color: #aaa;
   position: relative;/*相对于一个元素的正常位置来对其定位*/
   bottom: 185px;
@@ -43,6 +53,11 @@
   font-size: 70px;
   text-align:center;
 
+}
+.temperature {
+  position: fixed;
+  top: 30px;
+  right: 35px;
 }
 .heart {
   width:38px;

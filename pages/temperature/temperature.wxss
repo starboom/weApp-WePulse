@@ -1,0 +1,7 @@
+/* pages/temperature/temperature.wxss */
+
+.classname {
+  color: #62b900;
+  text-align: center;  
+  padding-top: 50%;
+}

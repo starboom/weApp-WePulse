@@ -45,10 +45,25 @@ function getApi(phpname, _method="GET", _data) {
   })
 }
 
+function icsuftSocketOn() {
+  /**
+   * 建立icsuft websocket连接
+   */
+  wx.connectSocket({
+    url: 'wss://icsuft.com:12345',
+    success: function () {
+      console.log("success to websocket")
+    },
+    fail: function () {
+      console.log("bad websocket")
+    }
+  })
+}
 module.exports = {
   formatTime: formatTime,
   sleep: sleep,
   request(phpname, method, data) {
     return getApi(phpname, method, data).then(res => res.data)
-  }
+  },
+  icsuftSocketOn: icsuftSocketOn
 }

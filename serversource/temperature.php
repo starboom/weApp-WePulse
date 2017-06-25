@@ -19,16 +19,16 @@
 
     echo "request_from_wechat";
   }
-  function readpulse($redis) {
+  function readtemperature($redis) {
     $pulse = 0;
     //echo "line 24";
-//    echo "line 25" . "\n";
+    echo "line 25" . "\n";
     while(1){
       // echo $pulse."\n";
       // $pulse++;
       // echo file_get_contents("../../test/pulse") . "\n";
       //echo $pulse . "\n";
-      echo $redis -> get("pulse") . "\n";
+      echo $redis -> get("temperature") . "\n";
       sleep(1);
     }
   }
@@ -229,7 +229,7 @@
 /*    echo "xxxx" . "\n";
     echo var_dump($_POST) . "\n";
     echo var_dump($_GET) . "\n";*/
-    readpulse($redis);
+    readtemperature($redis);
     $ret = fopen("php://stdin", "r");
     //print_r($req_prase);
     while($req = fgets($ret)) {
